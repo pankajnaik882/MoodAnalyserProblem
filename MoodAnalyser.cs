@@ -8,31 +8,25 @@ namespace MoodAnalyserDemo
 {
     public class MoodAnalyser
     {
-        public string Fun(string mood)
-
+        string mood; 
+       public void MoodException(string mood) 
         {
-            try
+            if(mood == null || mood == "") 
             {
-                if (mood == "Happy")
-                {
-                    return "HAPPY";
-                }
-                else if (mood == "Sad")
-                {
-                    return "SAD";
-                }
-                else if (mood == "")
-                {
-                    return "HAPPY";
-                }
-                else
-                {
-                    throw new Exception();
-                }
+                Console.WriteLine("Invalid Mood");
+               // throw new Exception("Invalid Mood Found Exception");
             }
-            catch (Exception ex)
+            else if(mood == "Happy" || mood == "happy")
             {
-             return ex.ToString();
+                Console.WriteLine("Happy Mood");
+            }
+            else if(mood == "Sad" || mood == "sad")
+            {
+                Console.WriteLine("Sad Mood");
+            }
+            else 
+            {
+                Console.WriteLine("The mood is " + mood);
             }
         }
     }
