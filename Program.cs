@@ -1,20 +1,23 @@
-﻿namespace MoodAnalyserDemo
+﻿using System.Reflection;
+
+namespace MoodAnalyserDemo
 {
     public class Program
     {
        
         public static void Main(string[] args)
         {
-            Console.WriteLine("Enter the Mood : ");
-            string x = Console.ReadLine();
-            try
+         /*   MoodAnalyser m1 = new MoodAnalyser();
+            MoodAnalyser m2 = new MoodAnalyser("Happy");
+            if(m1.Equals(m2))
             {
-                MoodAnalyser m1 = new MoodAnalyser();
-                m1.MoodException(x);
-            }catch(Exception ex)
-            {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Both Objects Are Equal");
             }
+            else 
+            {
+                Console.WriteLine("Both Objects are Different");
+            }
+         */
         }
 
     }
