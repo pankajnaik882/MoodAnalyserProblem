@@ -7,17 +7,17 @@ namespace MoodAnalyserDemo
        
         public static void Main(string[] args)
         {
-         /*   MoodAnalyser m1 = new MoodAnalyser();
-            MoodAnalyser m2 = new MoodAnalyser("Happy");
-            if(m1.Equals(m2))
+        /*    Console.WriteLine("Enter the Mood : ");
+            string mood = Console.ReadLine();
+            try
             {
-                Console.WriteLine("Both Objects Are Equal");
+                MoodAnalyser m1 = new MoodAnalyser();
+                m1.check(mood);
             }
-            else 
+            catch(Exception e) 
             {
-                Console.WriteLine("Both Objects are Different");
-            }
-         */
+                Console.WriteLine(e.Message);
+            } */
         }
 
     }

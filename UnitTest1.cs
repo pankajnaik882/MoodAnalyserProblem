@@ -8,12 +8,14 @@ namespace RelectionUnitTest
         public void MoodAnalyser_Success()
         {
             //Arrange
+            string mood = "";
             MoodAnalyser m1 = new MoodAnalyser();
-            MoodAnalyser m2 = new MoodAnalyser();
-            object expectedOutput = "Object are Different";
+            string expectedOutput = "No Such Class Error";
 
-            //Act 
-            object actualOutput = m1.Equals(m2);
+            //Act
+            string actualOutput = m1.check(mood);
+            Console.WriteLine(actualOutput);
+
 
             //Assert
             Assert.AreEqual(expectedOutput, actualOutput);
