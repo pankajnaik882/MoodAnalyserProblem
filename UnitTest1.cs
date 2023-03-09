@@ -10,6 +10,7 @@ namespace Operation
         [TestMethod]
         public void MoodAnalyser_Success()
         {
+
             //Arrange
             string s1 = "";
             MoodAnalyser m1 = new MoodAnalyser();

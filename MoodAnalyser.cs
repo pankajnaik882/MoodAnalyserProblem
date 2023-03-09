@@ -9,6 +9,7 @@ namespace MoodAnalyserDemo
     public class MoodAnalyser
     {
         public string Fun(string mood)
+
         {
             try
             {
