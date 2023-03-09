@@ -8,9 +8,9 @@ namespace MoodAnalyserDemo
 {
     public class MoodAnalyser
     {
-       public MoodAnalyser(string mood) 
+        public void check(string mood)
         {
-            Console.WriteLine(mood);
+            Console.WriteLine("Mood : " + mood);
         }
     }
 
