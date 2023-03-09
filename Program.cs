@@ -1,19 +1,19 @@
-﻿namespace MoodAnalyserDemo
+﻿using System.Reflection;
+
+namespace MoodAnalyserDemo
 {
     public class Program
     {
        
         public static void Main(string[] args)
         {
-            Console.WriteLine("Enter the Mood : ");
-            string x = Console.ReadLine();
-            try
+            
+            //Type t = GetType(m1);
+            Type t = typeof(MoodAnalyser);
+            ConstructorInfo[] constructorInfos = t.GetConstructors(BindingFlags.Public|BindingFlags.Instance);
+            foreach(ConstructorInfo constructorInfo in constructorInfos)
             {
-                MoodAnalyser m1 = new MoodAnalyser();
-                m1.MoodException(x);
-            }catch(Exception ex)
-            {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(constructorInfo);
             }
         }
 
