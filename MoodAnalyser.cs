@@ -15,11 +15,11 @@ namespace MoodAnalyserDemo
             {
                 throw new Exception("No Such Class Error");
             }
-          /*  else if(mood == "")
+            else if(mood == "")
             {
                 throw new Exception("No Such Method Error");
             }
-          */
+          
             else if(mood=="Happy" | mood == "happy")
             {
                 return "Happy";

@@ -20,5 +20,21 @@ namespace RelectionUnitTest
             //Assert
             Assert.AreEqual(expectedOutput, actualOutput);
         }
+
+        public void MoodAnalyser()
+        {
+            //Arrange
+            string mood = "";
+            MoodAnalyser m1 = new MoodAnalyser();
+            string expectedOutput = "No Such Method Error";
+
+            //Act
+            string actualOutput = m1.check(mood);
+            Console.WriteLine(actualOutput);
+
+
+            //Assert
+            Assert.AreEqual(expectedOutput, actualOutput);
+        }
     }
 }
