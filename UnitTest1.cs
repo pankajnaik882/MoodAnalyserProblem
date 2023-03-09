@@ -1,25 +1,29 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoodAnalyserDemo;
+using System.Text;
 
 namespace MoodTest
 {
     [TestClass]
     public class UnitTest1
     {
+
         [TestMethod]
-        public void Mood_Success()
+        public void MoodAnalyser_Success()
         {
-            //Arrange
-            string h = "Sad";
-            MoodAnalyser m1 = new MoodAnalyser();
-            string expectedOutput = "SAD";
+            // Arrange
+            //MoodAnalyser m1 = new MoodAnalyser("happy");
+            MoodAnalyser m1 = new MoodAnalyser("Sad");
 
-            //Act 
-            string actualOutput = m1.Mood(h);
+            // Act
+            var result = m1.mood();
 
-            //Assert
-            Assert.AreEqual(expectedOutput, actualOutput);
+            // Assert
+            Assert.AreEqual("Sad", result);
+
 
 
         }
+       
     }
 }
