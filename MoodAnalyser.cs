@@ -8,16 +8,16 @@ namespace MoodAnalyserDemo
 {
     public class MoodAnalyser
     {
-        public string Mood(string m)
+        public string n;
+        public MoodAnalyser(string name) 
         {
-            if(m == "Happy")
-            {
-                return "HAPPY";
-            }
-            else
-            {
-                return "SAD";
-            }
+            this.n = name;
+            Console.WriteLine(n);   
+        }
+       
+        public string mood()
+        {
+            return this.n;
         }
     }
 }
