@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Dynamic;
+using System.Reflection;
 
 namespace MoodAnalyserDemo
 {
@@ -7,14 +8,26 @@ namespace MoodAnalyserDemo
        
         public static void Main(string[] args)
         {
-            
-            //Type t = GetType(m1);
+           Console.WriteLine("Enter the Mood : ");
+            string mood = Console.ReadLine();
+            MoodAnalyser m1 = new MoodAnalyser(mood);
+
             Type t = typeof(MoodAnalyser);
-            ConstructorInfo[] constructorInfos = t.GetConstructors(BindingFlags.Public|BindingFlags.Instance);
-            foreach(ConstructorInfo constructorInfo in constructorInfos)
+            ConstructorInfo[] info = t.GetConstructors(BindingFlags.Public|BindingFlags.Instance);
+            foreach (ConstructorInfo info2 in info)
             {
-                Console.WriteLine(constructorInfo);
+                Console.WriteLine(info2.Name);
             }
+               
+         /* try
+            {
+                MoodAnalyser m1 = new MoodAnalyser();
+                m1.check(mood);
+            }
+            catch(Exception e) 
+            {
+                Console.WriteLine(e.Message);
+            } */
         }
 
     }
